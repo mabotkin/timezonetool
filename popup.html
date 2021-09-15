@@ -1,0 +1,30 @@
+<html>
+	<head>
+		<link rel="stylesheet" href="picker/mtr-datepicker.min.css">
+		<link rel="stylesheet" href="picker/mtr-datepicker.default-theme.min.css">
+	</head>
+	<body>
+		<center>
+		<p style="width: 400px;">
+			<h2>TimeZoneTool</h2>
+			<div id="picker" style="width: 50%"></div>
+			<div>
+				<input type="radio" id="default" name="format" value="" checked>
+				<label for="default">Default</label><br>
+				<input type="radio" id="compact" name="format" value="C">
+				<label for="compact">Compact</label><br>
+				<input type="radio" id="time" name="format" value="T">
+				<label for="time">Time Only</label>
+			</div>
+			<div id="results">
+				<p id="preview"></p>
+				<p id="flag"></p>
+				<button id="copyFlag">Copy Flag</button>
+			</div>
+		</p>
+		</center>
+		<script src="picker/mtr-datepicker.min.js"></script>
+		<script src="utils.js"></script>
+		<script src="popup.js"></script>
+	</body>
+</html>
