@@ -1,3 +1,3 @@
-window.setTimeout( function() {
+window.setInterval( function() {
 	replaceFlagsWithTime();
 } , 5000 );

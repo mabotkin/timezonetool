@@ -1,14 +1,17 @@
 // flag schema: {{tzt:UNIXTIME-options}}
 
 function replaceFlagsWithTime() {
-	var nodes = document.querySelectorAll("h1, h2, h3, h4, h5, p, li, td, caption, div, span, a");
+	var nodes = document.getElementsByTagName("*");
 	for ( var i = 0 ; i < nodes.length ; i++ ) {
-		if ( nodes[i].innerHTML.match( /{{tzt:(\d)+(-([A-Z]+))?}}/g ) != null )
+		if ( nodes[i].childElementCount == 0 )
 		{
-			nodes[i].innerHTML = nodes[i].innerHTML.replace( /{{tzt:(\d)+(-([A-Z]+))?}}/g , function( match ) {
-				var result = parseFlag( match );
-				return displayDate( result.date , result.options );
-			});
+			if ( nodes[i].innerHTML.match( /{{tzt:(\d)+(-([A-Z]+))?}}/g ) != null )
+			{
+				nodes[i].innerHTML = nodes[i].innerHTML.replace( /{{tzt:(\d)+(-([A-Z]+))?}}/g , function( match ) {
+					var result = parseFlag( match );
+					return displayDate( result.date , result.options );
+				});
+			}
 		}
 	}
 	/*
