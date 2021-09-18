@@ -2,7 +2,7 @@ var picker = new MtrDatepicker({
 	target: "picker",
 	minutes: {
 		min: 0,
-		max: 50,
+		max: 59,
 		step: 1,
 		maxlength: 2
 	},

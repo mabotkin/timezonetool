@@ -49,7 +49,7 @@ function displayDate( date , options = undefined ) {
 	if ( typeof options !== "undefined" ) {
 		if ( options.includes("C") ) {
 			// compact display
-			displaytext = date.getHours() + ":" + date.getMinutes() + " " + (date.getMonth()+1) + "/" + date.getDate() + "/" + date.getFullYear();
+			displaytext = date.getHours() + ":" + (date.getMinutes() + "").padStart(2, "0") + " " + (date.getMonth()+1) + "/" + date.getDate() + "/" + date.getFullYear();
 		}
 		if ( options.includes("T") ) {
 			// time only
